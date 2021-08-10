@@ -21,6 +21,7 @@
     "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "handlebars-layouts": "^3.1.4",
+    "helmet": "^4.6.0",
     "http-errors": "^1.7.2",
     "mongodb": "^3.6.11",
     "monk": "^7.3.4",

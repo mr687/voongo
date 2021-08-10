@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
+const helmet = require('helmet')
 const debug = require('debug')('app:voocket')
 
 require('dotenv').config()
@@ -23,7 +24,8 @@ let corsOptions = {
 if (app.get('env') === 'development') {
   corsOptions = {}
 }
-app.disable('x-powered-by');
+app.disable('x-powered-by')
+app.use(helmet())
 app.use(morgan('dev'))
 app.use(cors(corsOptions))
 app.use(express.urlencoded({extended: false}))
