@@ -23,6 +23,7 @@ let corsOptions = {
 if (app.get('env') === 'development') {
   corsOptions = {}
 }
+app.disable('x-powered-by');
 app.use(morgan('dev'))
 app.use(cors(corsOptions))
 app.use(express.urlencoded({extended: false}))
