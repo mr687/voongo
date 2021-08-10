@@ -16,8 +16,15 @@ const session = require('./session')
 if (app.get('env') === 'production') {
   app.set('trust proxy', 1)
 }
+let corsOptions = {
+  origin: 'https://voongo.ngoder.com',
+  optionsSuccessStatus: 200
+}
+if (app.get('env') === 'development') {
+  corsOptions = {}
+}
 app.use(morgan('dev'))
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.urlencoded({extended: false}))
 app.use(express.static('./public'))
 app.use(session)
