@@ -4,6 +4,7 @@ module.exports = {
   apps : [{
     name: process.env.APP_NAME,
     script: 'app.js',
+    watch: false,
     env: {
       NODE_ENV: "development",
     },
