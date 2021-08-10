@@ -1,0 +1,12 @@
+{{#extend 'layout'}}
+  {{#content 'body'}}
+    <section id="login">
+      <h4>{ login }</h4>
+      <form action="/login" method="post">
+        <input type="text" name="username" placeholder="username" required autofocus>
+        <input type="password" name="password" placeholder="password" required>
+        <button type="submit">save()</button>
+      </form>
+    </section>
+  {{/content}}
+{{/extend}}
