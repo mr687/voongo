@@ -4,7 +4,6 @@ module.exports = {
   apps : [{
     name: process.env.APP_NAME,
     script: 'app.js',
-    watch: '.',
     env: {
       NODE_ENV: "development",
     },
@@ -17,7 +16,6 @@ module.exports = {
       DEPLOY_SSH_USER:process.env.DEPLOY_SSH_USER,
       DEPLOY_SSH_HOST:process.env.DEPLOY_SSH_HOST,
       DEPLOY_SSH_PATH:process.env.DEPLOY_SSH_PATH,
-      NODE_ENV:process.env.NODE_ENV,
       MONGODB_URI:process.env.MONGODB_URI,
       REDIS_HOST:process.env.REDIS_HOST,
       REDIS_PORT:process.env.REDIS_PORT,
